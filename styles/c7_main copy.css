@@ -1,0 +1,525 @@
+/* the reset selector (universal selector)*/
+
+* {
+
+margin: 0;
+
+padding: 0;
+
+}
+
+.logo{
+
+float:left;
+
+margin-right: 1em;
+
+/*changed width of the left and right padding from em to percentage 1*100/960 ;*/
+
+padding-right: 0.105%;
+
+padding-left: 0.105%;
+
+}
+
+body{
+
+/* rule set for the body in the chapter 4-1E */
+
+font-family: Verdana,Arial, Helvetica, sans-serif;
+
+font-size: 100%;
+
+clear:left;
+
+/*updated rule set for the body to 99% to get the rom for the 3-pixels left and right borders */
+
+width: 99%;
+
+/* changed or added the max-width to 960 pixels */
+
+max-width: 960px;
+
+margin-top: 0;
+
+margin-bottom: 0;
+
+margin-right: auto;
+
+margin-left: auto;
+
+border: 3px solid #931420;
+
+/* the back background color of the body set to */
+
+background-color: #fffded;
+
+}
+
+/* background of the html page is set to white so as to visible the body color which was set at the body*/
+
+html {
+
+background-color: white;
+
+}
+
+/* bottom border set same as the border around the body.*/
+
+header {
+
+border-bottom: 3px solid #931420;
+
+/*top and bottom padding setting to the header.*/
+
+padding-top: 1.5em;
+
+padding-bottom: 2em;
+
+padding-left:1em;
+
+/* added linear- gradient background color to the header*/
+
+background-image: linear-gradient(30deg,#f6bb73 25%,white);
+
+}
+
+header h2{
+
+font-size: 170%;
+
+color: #800000;
+
+}
+
+header h3{
+
+font-size: 130%;
+
+font-style: italic;
+
+}
+
+#nav_menu ul {
+
+list-style-type: none;
+
+position: relative;/* so the submenu cab be positioned*/
+
+margin: 0;
+
+padding: 0;
+
+}
+
+/* a rule set for the
+
+element to display the list horizontally */
+#nav_menu ul li {
+
+/* this rule was taken from main navigation menu unordered list and was added in the list element */
+
+width: 13.334%;
+
+float: left;
+
+}
+
+/* rulset to keep the submenu not to display by default */
+
+#nav_menu ul ul {
+
+display: none;/* don't display submenu until hover of li */
+
+position: absolute;
+
+top: 100%; /* position the submenu at the bottom of main menu */
+
+}
+
+/* a ruleset to the element */
+
+#nav_menu ul li a {
+
+display: block;
+
+/* changed the width of the main navigation menu's element by using the formula in 8-4 i.e. (525*100/960) */
+
+/* this rule was removed after step 7 and it was added in the list element
+
+
+Step 9/12
+width: 13.334%;*/
+text-align: center;
+
+padding: 1em 1em;
+
+text-decoration: none;
+
+background-color: #800000;
+
+color: white;
+
+font-weight: bold;
+
+}
+
+/* ruleset to current class to set the text color to yellow */
+
+#nav_menu ul li a.current {
+
+color: yellow;
+
+}
+
+/* ruleset to display list items in the submenu that keeps them from floating so they're displayed vertically */
+
+#nav_menu ul ul li {
+
+float: none;/* display submenu vertically */
+
+/* this rule was taken from main navigation menu unordered list and was added in the list element */
+
+width: 13.334%;
+
+}
+
+/* to display the submenu when mouse hovers over the list item that contains the submenu */
+
+#nav_menu ul li:hover > ul {/* select the ul child of li element */
+
+display: block; /* display submenu on hover of li element */
+
+}
+
+/* ruleset to display the submenu below the list item, and to add a empty space*/
+
+#nav_menu>ul::after {
+
+content: ""; /* add empty content to the end of the first ul */
+
+display: block;/* display that content as block element */
+
+clear: both;/* stop the floating of the li elements */
+
+}
+
+.circle {
+
+list-style-type: circle;
+
+}
+
+main section {
+
+/* changed the width of the section by using the formula in 8-4 i.e. (525*100/960) */
+
+width: 58.6875%;
+
+float: right;
+
+/* changed percentage from 20px to percentage of right and left paddings */
+
+padding-right: 2.84%;
+
+padding-left: 2.84%;
+
+padding-bottom: 20px;
+
+}
+
+aside {
+
+/* changed the width of the aside by using the formula in 8-4 i.e. (215*100/960) */
+
+width: 22.3959%;
+
+float: right;
+
+padding-left: 20px;
+
+padding-bottom: 20px;
+
+}
+
+article {
+
+padding-top: .5ems;
+
+padding-bottom: .5ems;
+
+border-top: 2px solid #800000;
+
+border-bottom:2px solid #800000;
+
+}
+
+article img {
+
+/* set the max-width and min-width properties of the image */
+
+max-width: 40%;
+
+min-width:150px;
+
+float: right;
+
+margin-top: 1px;
+
+margin-bottom: 1px;
+
+margin-left: 1px;
+
+margin-right: 1px;
+
+border: 1px solid black;
+
+}
+
+article h2 {
+
+padding-top: 0;
+
+}
+
+article h3 {
+
+font-size: 105%;
+
+padding-bottom: .25ems;
+
+}
+
+/* rule set for the heading in the
+
+*/
+main section h2{
+
+font-size: 130%;
+
+color: #800000;
+
+padding-top: .5em;
+
+padding-bottom: .25em;
+
+}
+
+main section h3{
+
+font-size:105%;
+
+padding-bottom: .25em;
+
+}
+
+/* rule set for the heading in the
+
+*/
+aside h2{
+
+font-size: 130%;
+
+color: #800000;
+
+
+Step 10/12
+padding-top: .5em;
+padding-bottom: .25em;
+
+}
+
+aside h3 {
+
+font-size: 105%;
+
+padding-bottom: .25em;
+
+}
+
+aside img {
+
+padding-top: 1em;/* space between image and associated names*/
+
+padding-bottom: 1em;
+
+}
+
+main section p {
+
+padding-bottom: .5em;
+
+}
+
+.quotes {
+
+padding-right: 2em;
+
+padding-left: 2em;
+
+font-style: italic;
+
+}
+
+main section ul {
+
+padding-bottom: .25em;
+
+padding-left: 1.25em;
+
+}
+
+main section li {
+
+padding-bottom: .35em;
+
+}
+
+a:hover,a:focus{
+
+font-style:italic;
+
+}
+
+/* footer background-color set same as the color of the border.*/
+
+footer {
+
+background-color: #931420;
+
+clear: both;
+
+}
+
+footer p{
+
+text-align: center;
+
+/*set the top and bottom padding for the paragraph */
+
+padding-top: 1em;
+
+padding-bottom: 1em;
+
+}
+
+/* media query for the screen type that checks that the viewport width is 959px or less */
+
+@media only screen and (max-width: 959px) {
+
+main section h1{
+
+font-size: 135%;
+
+}
+
+main section h2 {
+
+font-size: 120%
+
+}
+
+}
+
+/* media query for a phone in landscape orientation */
+
+@media only screen and (max-width: 767px){
+
+header img{
+
+float: none;
+
+}
+
+header {
+
+text-align: center;
+
+}
+
+/* section rule set */
+
+main section {
+
+float: none;
+
+width: 94.32%;/* subtracted left and right padding from the value 100% */
+
+}
+
+/* aside rule set */
+
+aside {
+
+float: none;
+
+padding-right: 2.84%;
+
+width: 94.32%; /* subtracted left and right padding from the value 100% */
+
+}
+
+/* changed the max-width of the image in the article */
+
+article img {
+
+max-width: 30%;
+
+}
+
+/* div properties to arrange the speaker in two columns*/
+
+aside div {
+
+-moz-column-count: 2;
+
+-webkit-column-count: 2;
+
+column-count: 2;
+
+}
+
+/* first rule to hide the standard navigation menu */
+
+.js #menu{
+
+display:none;
+
+}
+
+/* second rule to display the mobile menu */
+
+.js .slicknav_menu{
+
+display: block;
+
+}
+
+/* third rule to set the background-color of the mobile menu */
+
+.slicknav_menu{
+
+background-color:#800000 !important;
+
+}
+
+}
+
+/* media query for a phone in portrait orientation */
+
+ 
+Step 11/12
+@media only screen and (max-width: 479px){
+font-size: 90%;
+
+}
+
+/* added code for the slicnav menu ruleset and jQuery plugin ruleset from the downloaded file */
+
+/* ruleset to hide the mobile menu*/
+
+.slicknav_menu{
+
+display:none;
+
+}
